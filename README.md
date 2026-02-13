@@ -53,7 +53,7 @@
     <a href="https://github.com/Tygo-van-den-Hurk/Type-Sea/actions/workflows/many--publish-npm-package.yaml">
       <picture>
         <source srcset="https://img.shields.io/github/actions/workflow/status/Tygo-van-den-Hurk/Type-Sea/many--publish-npm-package.yaml?style=flat&labelColor=FFFFFF&color=358EF1&logo=npm&logoColor=000000&label=NPM&branch=main&event=push" media="(prefers-color-scheme: light)" />
-        <img src="https://img.shields.io/github/actions/workflow/status/Tygo-van-den-Hurk/Type-Sea/many--build-and-push-image.yaml?style=flat&labelColor=2F363D&color=00273F&logo=npm&logoColor=FFFFFF&label=NPM&branch=main&event=push" alt="NPM package building" />
+        <img src="https://img.shields.io/github/actions/workflow/status/Tygo-van-den-Hurk/Type-Sea/many--publish-npm-package.yaml?style=flat&labelColor=2F363D&color=00273F&logo=npm&logoColor=FFFFFF&label=NPM&branch=main&event=push" alt="NPM package building" />
       </picture>
     </a>
     <!--~###################################~-->
