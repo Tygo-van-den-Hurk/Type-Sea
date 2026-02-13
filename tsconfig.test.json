@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "composite": false,
+        "rootDir": ".",
+        "noEmit": true
+    },
+    "include": [
+        "src/**/*",
+        "test/**/*",
+        "vitest.config.ts",
+    ],
+}

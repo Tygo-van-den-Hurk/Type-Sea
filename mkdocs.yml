@@ -1,0 +1,32 @@
+site_name: Type-Sea
+site_author: Tygo van den Hurk
+site_url: https://Tygo-van-den-Hurk.github.io/Type-Sea
+site_description: TypeScript helper types, and the improved enums a la Rust style.
+
+repo_url: https://github.com/Tygo-van-den-Hurk/Type-Sea
+
+theme: 
+  name: shadcn
+  icon: assets/logo.svg
+  favicon: assets/logo.svg
+  custom_dir: docs/overrides
+  show_title: true
+  show_stargazers: false
+  pygments_style:
+    light: github-light
+    dark: github-dark
+  highlightjs: false
+  show_datetime: true
+  color_mode: auto
+
+plugins: 
+  - search
+  - mkdocstrings
+  - callouts
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - fenced_code
+  - codehilite
+  - attr_list

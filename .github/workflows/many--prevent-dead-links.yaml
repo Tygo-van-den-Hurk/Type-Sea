@@ -1,0 +1,51 @@
+name: Prevent Dead links
+# Looks in the repository for dead links in markdown and HTML files, and fails
+# if links to dead websites or non-existing files are present in the
+# repository.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main, master, release, development]
+    paths: [ "**/*.md", "**/*.markdown", "**/*.html", "**/*.htm" ]
+  push:
+    branches: [main, master, release, development]
+    paths: [ "**/*.md", "**/*.markdown", "**/*.html", "**/*.htm" ]
+  schedule: [cron: "0 0 * * 0"]
+
+jobs:
+
+  check-all-the-links:
+    name: Check all the links
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.3.0
+      - name: Restore lychee cache
+        uses: actions/cache@v5.0.1
+        id: restore-cache
+        with:
+          path: .lycheecache
+          key: >
+            lychee-cache-cron-${{ hashFiles(
+              '**/*.md', 
+              '**/*.markdown', 
+              '**/*.html', 
+              '**/*.htm'
+            ) }}
+          restore-keys: lychee-cache-cron-
+      - name: Check the links
+        uses: lycheeverse/lychee-action@v2.6.1
+        with:
+          fail: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: >
+            --glob-ignore-case **/*.{md,markdown,html,htm}
+            --verbose --max-concurrency 1 --hidden --cache
+            --max-cache-age 1d --exclude-path docs/overrides
+      - name: Save lychee cache
+        uses: actions/cache/save@v5.0.1
+        with:
+          path: .lycheecache
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
