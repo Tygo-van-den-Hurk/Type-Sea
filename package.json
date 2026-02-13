@@ -4,7 +4,7 @@
     "description": "TypeScript helper types, and the improved enums a la Rust style.",
     "homepage": "https://Tygo-van-den-Hurk.github.io/Type-Sea",
     "author": "Tygo van den Hurk",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "private": false,
     "keywords": [
         "typescript",
