@@ -1,9 +1,9 @@
 mkdocs==1.6.1
 mkdocs-shadcn==0.9.8
 mkdocs-callouts==1.16.0
-Pygments==2.19.2
+Pygments==2.20.0
 mkdocstrings-python==2.0.1
-pymdown-extensions==10.19.1
+pymdown-extensions==11.0.1
 click==8.3.1
 ghp-import==2.1.0
 jinja2==3.1.6
@@ -16,7 +16,7 @@ pyyaml-env-tag==1.1
 pyyaml==6.0.3
 bottle==0.13.4
 watchdog==6.0.0
-gitpython==3.1.45
+gitpython==3.1.59
 mkdocstrings==1.0.0
 griffe==1.15.0
 mkdocs-autorefs==1.4.3
